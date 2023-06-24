@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Input, Button } from "react-materialize";
+import { TextInput, Button } from "react-materialize";
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
 
@@ -12,17 +12,17 @@ import { COMP_REQ, requestStatuses } from "../../actions/types";
 const { SUCCESS, PENDING, ERROR, SUBMITTED, IDLE } = requestStatuses;
 
 const NameInput = ({ input, meta, ...rest }) => (
-        <Input 
+        <TextInput 
           label="Competition name (e.g. Carnegie Mellon Informatics and Mathematics Competition)" 
           className="clear-top" { ...input } { ...rest }/>
       ),
       ShortNameInput = ({ input, meta, ...rest }) => (
-        <Input 
+        <TextInput 
           label="Short name (e.g. CMIMC) (optional)" 
           className="clear-top" { ...input } { ...rest } />
       ),
       WebsiteInput = ({ input, meta, ...rest }) => (
-        <Input 
+        <TextInput 
           label="Website (optional)" 
           className="clear-top" { ...input } { ...rest } />
       );

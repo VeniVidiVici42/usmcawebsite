@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Input, Row, Col, Button } from "react-materialize";
+import { TextInput, Row, Col, Button } from "react-materialize";
 import _ from "lodash";
 
 import renderKaTeX from "../../katex.js";
@@ -143,7 +143,7 @@ class CompetitionsSelectDumb extends React.Component {
       ...rest
     } = this.props;
     return competitions[type].requestStatus === SUCCESS ? (
-      <Input s={12} type="select" label="Competition" { ...input } { ...rest }>
+      <TextInput s={12} type="select" label="Competition" { ...input } { ...rest }>
         <option value="">
           { publicDatabase ? "Public Database" : "Select a Competition" }
         </option>
@@ -152,12 +152,12 @@ class CompetitionsSelectDumb extends React.Component {
             <option key={ idx } value={ _id }>{ short_name }</option>
           ))
         }
-      </Input>
+      </TextInput>
     ) : (
-      <Input s={12} type="select" label="Competition" { ...input } { ...rest }>
+      <TextInput s={12} type="select" label="Competition" { ...input } { ...rest }>
         <option value="">Select a Competition</option>
         <option value="">Loading competitions...</option>
-      </Input>
+      </TextInput>
     );
   }
 };
@@ -323,7 +323,7 @@ class KaTeXInput extends React.Component {
     return (
       <div>
         <Row>
-          <Input
+          <TextInput
             ref={ elem => { this.inputField = elem; } }
             s={6} type={ type } label={ label }
             onChange={ onChange } />

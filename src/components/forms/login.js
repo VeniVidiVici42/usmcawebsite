@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Input, Button } from 'react-materialize';
+import { Row, Col, TextInput, Button } from 'react-materialize';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -11,10 +11,10 @@ import { AUTH_USER, requestStatuses } from "../../actions/types";
 const { SUCCESS, PENDING, SUBMITTED, IDLE, ERROR } = requestStatuses;
 
 const EmailInput = ({ input, meta, ...rest }) => (
-        <Input type="email" placeholder="Email" s={12} { ...input } { ...rest } />
+        <TextInput type="email" placeholder="Email" s={12} { ...input } { ...rest } />
       ),
       PasswordInput = ({ input, meta, ...rest }) => (
-        <Input type="password" placeholder="Password" s={12} { ...input } { ...rest } />
+        <TextInput type="password" placeholder="Password" s={12} { ...input } { ...rest } />
       );
 
 class LoginForm extends React.Component {

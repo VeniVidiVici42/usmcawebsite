@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Input, Row, Col, Button } from "react-materialize";
+import { TextInput, Row, Col, Button } from "react-materialize";
 
 import Spinner from "../spinner";
 import Error from "../error";
@@ -13,10 +13,10 @@ import { requestStatuses } from "../../actions/types";
 const { SUCCESS, PENDING, SUBMITTED, ERROR, IDLE } = requestStatuses;
 
 const NameInput = ({ input, meta, ...rest }) => (
-        <Input m={6} s={12} label="Name" { ...input } { ...rest } />
+        <TextInput m={6} s={12} label="Name" { ...input } { ...rest } />
       ),
       NumberInput = ({ input, meta, ...rest }) => (
-        <Input m={3} s={12} label="Test Size" type="number" min={0} { ...input } { ...rest } />
+        <TextInput m={3} s={12} label="Test Size" type="number" min={0} { ...input } { ...rest } />
       );
 
 class CreateTestForm extends React.Component { 

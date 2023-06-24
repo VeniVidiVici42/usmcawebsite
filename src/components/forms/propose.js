@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Input, Button } from "react-materialize";
+import { Row, Col, TextInput, Button } from "react-materialize";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import { Link } from "react-router-dom";

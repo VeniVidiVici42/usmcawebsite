@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Input, Button } from 'react-materialize';
+import { Row, Col, TextInput, Button } from 'react-materialize';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
@@ -11,13 +11,13 @@ import { CHANGE_PASS, requestStatuses } from "../../actions/types";
 const { SUCCESS, PENDING, SUBMITTED, IDLE, ERROR } = requestStatuses;
 
 const CurrentPasswordField = ({ input, meta, ...rest }) => (
-        <Input type="password" placeholder="Current Password" s={12} { ...input } { ...rest } />
+        <TextInput type="password" placeholder="Current Password" s={12} { ...input } { ...rest } />
       ),
       NewPasswordField = ({ input, meta, ...rest }) => (
-        <Input type="password" placeholder="New Password" s={12} { ...input } { ...rest } />
+        <TextInput type="password" placeholder="New Password" s={12} { ...input } { ...rest } />
       ),
       NewPasswordConfirmField = ({ input, meta, ...rest }) => (
-        <Input type="password" placeholder="New Password (confirm)" s={12} { ...input } { ...rest } />
+        <TextInput type="password" placeholder="New Password (confirm)" s={12} { ...input } { ...rest } />
       );
 
 class ChangePasswordForm extends React.Component {

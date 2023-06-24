@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Row, Col, Input } from "react-materialize";
+import { Row, Col, TextInput } from "react-materialize";
 import { connect } from "react-redux";
 
 import { ProblemPreview } from "../utilities";
@@ -20,24 +20,24 @@ class DatabasePage extends React.Component {
           <Row>
             <form className="col s12">
               <Row>
-                <Input m={4} s={12} type="select" label="Subject" multiple>
+                <TextInput m={4} s={12} type="select" label="Subject" multiple>
                     <option value="">Choose your option</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
-                </Input>
-                <Input m={4} s={12} type="select" label="Sort by" multiple>
+                </TextInput>
+                <TextInput m={4} s={12} type="select" label="Sort by" multiple>
                     <option value="">Choose your option</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
-                </Input>
-                <Input m={4} s={12} type="select" label="Difficulty" multiple>
+                </TextInput>
+                <TextInput m={4} s={12} type="select" label="Difficulty" multiple>
                     <option value="">Choose your option</option>
                     <option value="1">Easy</option>
                     <option value="2">Medium</option>
                     <option value="3">Hard</option>
-                </Input>
+                </TextInput>
               </Row>
             </form>
           </Row>

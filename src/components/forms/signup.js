@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Input, Button } from 'react-materialize';
+import { Row, Col, TextInput, Button } from 'react-materialize';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
@@ -19,16 +19,16 @@ const universities = {
 }
 
 const NameInput = ({ input, meta, ...rest }) => (
-        <Input type="text" label="Name" s={12} { ...input } { ...rest } />
+        <TextInput type="text" label="Name" s={12} { ...input } { ...rest } />
       ),
       EmailInput = ({ input, meta, ...rest }) => (
-        <Input type="email" label="Email" s={12} { ...input } { ...rest } />
+        <TextInput type="email" label="Email" s={12} { ...input } { ...rest } />
       ),
       PasswordInput = ({ input, meta, ...rest }) => (
-        <Input type="password" label="Password" s={12} { ...input } { ...rest } />
+        <TextInput type="password" label="Password" s={12} { ...input } { ...rest } />
       ),
       PasswordConfirmInput = ({ input, meta, ...rest }) => (
-        <Input type="password" label="Password (confirm)" s={12} { ...input } { ...rest } />
+        <TextInput type="password" label="Password (confirm)" s={12} { ...input } { ...rest } />
       ),
       UniversityInput = ({ input, meta, ...rest }) => (
         <Autocomplete

@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import '@babel/polyfill';
 import * as $ from 'jquery';
 
 import * as React from 'react';

@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Input, Row, Button } from "react-materialize";
+import { TextInput, Row, Button } from "react-materialize";
 
 import Spinner from "../spinner";
 import Error from "../error";
@@ -19,10 +19,10 @@ import { CONTEST_POST, requestStatuses } from "../../actions/types";
 const { SUCCESS, PENDING, SUBMITTED, ERROR, IDLE } = requestStatuses;
 
 const NameInput = ({ input, meta, ...rest }) => (
-        <Input s={12} label="Name" { ...input } { ...rest } />
+        <TextInput s={12} label="Name" { ...input } { ...rest } />
       ),
       DateInput = ({ input, meta, ...rest }) => (
-        <Input s={12} label="Date" type="date" { ...input } { ...rest } />
+        <TextInput s={12} label="Date" type="date" { ...input } { ...rest } />
       ),
       LocationsInput = ({ input, meta, ...rest }) => (
         <LocationArrayInput { ...input } { ...rest } />

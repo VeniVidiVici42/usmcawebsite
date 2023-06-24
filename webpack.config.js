@@ -15,7 +15,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx', 'json']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: SRC_DIR,
@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.tsx?/,
         include: SRC_DIR,
-        loader: 'awesome-typescript-loader'
+        loader: 'ts-loader'
       }
     ]
   }

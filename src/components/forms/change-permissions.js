@@ -28,14 +28,14 @@ class ChangePermissions extends React.Component {
     return (
       <div>
         <p>Current status: <span className="bold-text">{ permissionsEnum[this.props.defaultValue] }</span></p>
-        <Input s={12} type="select" defaultValue={ this.props.defaultValue } { ...input } { ...rest }>
+        <TextInput s={12} type="select" defaultValue={ this.props.defaultValue } { ...input } { ...rest }>
           <option value="">Select a Permission</option>
           {
             _.keys(permissionsEnum).map((key, idx) => (
               <option value={ key } key={ idx }>{ permissionsEnum[key] }</option>
             ))
           }
-        </Input>
+        </TextInput>
       </div>
     );
   }
