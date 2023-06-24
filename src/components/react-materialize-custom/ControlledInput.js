@@ -21,7 +21,7 @@ class Input extends React.Component {
 
   componentDidMount () {
     if (this.isMaterialSelect()) {
-      $(this.selectInput).material_select();
+      $(this.selectInput).formSelect();
       $(this.selectInput).on('change', this._onChange);
     }
     if (this.isDatePicker) {
@@ -32,7 +32,7 @@ class Input extends React.Component {
 
   componentDidUpdate () {
     if (this.isMaterialSelect() && !this.props.multiple) {
-      $(this.selectInput).material_select();
+      $(this.selectInput).formSelect();
     }
   }
 
@@ -40,7 +40,7 @@ class Input extends React.Component {
     if (this.isMaterialSelect()) {
       this.setState({
         value: nextProps.defaultValue
-      }, () => $(this.selectInput).material_select());
+      }, () => $(this.selectInput).formSelect());
     }
     // only set if untouched
     if (nextProps.defaultValue && !this.state.value && !this.state.edited) {

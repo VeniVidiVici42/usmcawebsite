@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import _ from "lodash";
 
-import Input from "../react-materialize-custom/ControlledInput";
+import TextInput from "../react-materialize-custom/ControlledInput";
 import { RightButtonPanel } from "../utilities";
 import { permissionsEnum } from "../../../constants";
 import { changePermissions } from "../../actions";

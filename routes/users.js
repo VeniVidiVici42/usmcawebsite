@@ -64,8 +64,7 @@ router.put('/', auth.verifyJWT, (req, res) => {
 router.get('/admin', (req, res) => {
   User.find({ admin: true }, 'name email', (err, admins) => {
     if (err) {
-      console.log(err);
-      return handler(false, `Database failed to load admins. $[err}`, 503)(req, res); } else {
+      return handler(false, 'Database failed to load admins.', 503)(req, res); } else {
       return handler(true, 'Successfully loaded admins info.', 200, {
         admins: admins
       })(req, res);
